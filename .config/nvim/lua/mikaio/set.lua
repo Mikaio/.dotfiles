@@ -16,3 +16,4 @@ vim.opt.wrap = false
 
 vim.opt.guifont = { "DroidSansMono Nerd Font Mono", ":h12" }
 
+vim.g.mapleader = " "

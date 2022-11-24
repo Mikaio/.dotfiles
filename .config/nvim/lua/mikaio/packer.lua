@@ -11,6 +11,8 @@ return require('packer').startup(function(use)
   use 'ThePrimeagen/harpoon'
   use 'preservim/nerdtree'
   use 'christoomey/vim-tmux-navigator'
+  use 'nvim-telescope/telescope.nvim'
+  use 'nvim-telescope/telescope-media-files.nvim'
   use ({
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
