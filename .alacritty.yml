@@ -3,7 +3,7 @@ window:
     x: 10
     y: 10
 
-  opacity: 0.1
+  opacity: 0.5
 
 font:
   normal:
@@ -13,10 +13,10 @@ font:
 
 colors:
   primary:
-    background: '#eeeeee'
-    foreground: '#ffffff'
+    background: '#181818'
+    foreground: '#eeeeee'
 
-# shell:
-  # program: /bin/fish
-  # args:
-    # - --login
+shell:
+  program: /bin/fish
+  args:
+    - --login
