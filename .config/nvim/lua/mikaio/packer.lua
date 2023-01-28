@@ -43,10 +43,13 @@ return require('packer').startup(function(use)
     run = ":TSUpdate"
   })
   use "windwp/nvim-autopairs"
+  use "windwp/nvim-ts-autotag"
 
   -- comment stuff
   use "numToStr/Comment.nvim"
   use "JoosepAlviste/nvim-ts-context-commentstring"
+
+  use "gbprod/substitute.nvim"
 
   -- use 'tiagofumo/vim-nerdtree-syntax-highlight'
   use 'johnstef99/vim-nerdtree-syntax-highlight'

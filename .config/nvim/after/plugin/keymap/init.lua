@@ -19,3 +19,11 @@ nnoremap("<leader>op", "<cmd>tabn<CR>") -- goes to next tab
 nnoremap("<leader>nd", "<cmd>lua _NODE_TOGGLE()<CR>")
 nnoremap("<leader>ht", "<cmd>lua _HTOP_TOGGLE()<CR>")
 nnoremap("<leader>py", "<cmd>lua _PYTHON_TOGGLE()<CR>")
+
+--[[ if you forget how to use substitute: https://github.com/gbprod/substitute.nvim/blob/main/DEMO.md ]]
+nnoremap("<leader>s", "<cmd>lua require('substitute.range').operator()<cr>")
+xnoremap("<leader>s", "<cmd>lua require('substitute.range').visual()<cr>")
+nnoremap("<leader>ss", "<cmd>lua require('substitute.range').word()<cr>")
+
+nnoremap("<Leader>oo", "o<Esc>")
+nnoremap("<Leader>OO", "O<Esc>")
