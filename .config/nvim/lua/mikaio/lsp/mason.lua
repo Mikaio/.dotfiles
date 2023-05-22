@@ -5,6 +5,7 @@ local servers = {
 	"gopls",
     "tsserver",
 	"tailwindcss",
+    "jdtls",
 }
 
 local settings = {

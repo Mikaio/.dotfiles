@@ -14,6 +14,6 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
-vim.opt.guifont = { "DroidSansMono Nerd Font Mono", ":h12" }
+vim.opt.guifont = { "DroidSansM Nerd Font Regular", ":h12" }
 
 vim.g.mapleader = " "

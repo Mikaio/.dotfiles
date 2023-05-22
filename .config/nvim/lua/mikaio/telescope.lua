@@ -31,7 +31,7 @@ telescope.setup {
 
                 ["<C-u>"] = actions.preview_scrolling_up, -- Scroll up in preview window
                 ["<C-d>"] = actions.preview_scrolling_down,	-- Scroll down in preview window
-            
+
                 ["<PageUp>"] = actions.results_scrolling_up,
                 ["<PageDown>"] = actions.results_scrolling_down,
 
