@@ -1,0 +1,6 @@
+#!/bin/sh
+
+alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
+alias nvimrc='nvim ~/.config/nvim/'
+alias myzsh='nvim ~/.config/zsh/'
+alias config='/usr/bin/git --git-dir=/home/mikaio/.cfg/ --work-tree=/home/mikaio'
