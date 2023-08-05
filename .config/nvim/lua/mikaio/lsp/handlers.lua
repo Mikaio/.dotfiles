@@ -81,13 +81,13 @@ local function lsp_keymaps()
   )
   nnoremap("]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', silent)
   nnoremap("<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", silent)
-  vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
+  vim.cmd [[ command! Format execute 'lua vim.lsp.buf.format()' ]]
 end
 
 M.on_attach = function(client)
-  if client.name == "tsserver" then
-    client.server_capabilities.documentFormattingProvider = false
-  end
+  --[[ if client.name == "tsserver" then ]]
+  --[[   client.server_capabilities.documentFormattingProvider = false ]]
+  --[[ end ]]
   lsp_keymaps()
   lsp_highlight_document(client)
 end

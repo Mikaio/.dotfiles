@@ -25,5 +25,7 @@ nnoremap("<leader>s", "<cmd>lua require('substitute.range').operator()<cr>")
 xnoremap("<leader>s", "<cmd>lua require('substitute.range').visual()<cr>")
 nnoremap("<leader>ss", "<cmd>lua require('substitute.range').word()<cr>")
 
-nnoremap("<Leader>oo", "o<Esc>")
-nnoremap("<Leader>OO", "O<Esc>")
+nnoremap("<leader>oo", "o<Esc>")
+nnoremap("<leader>OO", "O<Esc>")
+
+nnoremap("<leader>f", "<cmd>Format<CR>")
