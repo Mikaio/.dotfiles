@@ -6,7 +6,8 @@ local servers = {
     "tsserver",
 	"tailwindcss",
     "jdtls",
-    "rust_analyzer"
+    "rust_analyzer",
+    "prismals"
 }
 
 local settings = {
