@@ -25,8 +25,9 @@ telescope.setup {
                 ["<Up>"] = actions.move_selection_previous,
 
                 ["<CR>"] = actions.select_default, -- Confirm selection
-                ["<C-x>"] = actions.select_horizontal, -- Go to file selection as a split
-                ["<C-v>"] = actions.select_vertical, -- Go to file selection as a vsplit
+                --[[ ["<C-x>"] = actions.select_horizontal, -- Go to file selection as a split ]]
+                --[[ ["<C-v>"] = actions.select_vertical, -- Go to file selection as a vsplit ]]
+                ["<C-x>"] = actions.select_vertical, -- Go to file selection as a vsplit
                 ["<C-t>"] = actions.select_tab, -- Go to a file in a new tab
 
                 ["<C-u>"] = actions.preview_scrolling_up, -- Scroll up in preview window

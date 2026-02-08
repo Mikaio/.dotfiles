@@ -45,7 +45,7 @@ return require('lazy').setup({
   "neovim/nvim-lspconfig", -- enable LSP
   "williamboman/mason.nvim", -- simple to use language server installer
   "williamboman/mason-lspconfig.nvim", -- simple to use language server installer
-  "jose-elias-alvarez/null-ls.nvim", -- LSP diagnostics and code actions
+  "nvimtools/none-ls.nvim", -- LSP diagnostics and code actions
 
   {
     "nvim-treesitter/nvim-treesitter",
@@ -59,6 +59,17 @@ return require('lazy').setup({
   "JoosepAlviste/nvim-ts-context-commentstring",
 
   "gbprod/substitute.nvim",
+
+  {
+    "nvzone/typr",
+    dependencies = "nvzone/volt",
+    opts = {},
+    cmd = { "Typr", "TyprStats" },
+  },
+  {
+    "ThePrimeagen/vim-be-good",
+    cmd = "VimBeGood",
+  },
 
   -- use "tiagofumo/vim-nerdtree-syntax-highlight"
   "johnstef99/vim-nerdtree-syntax-highlight",
