@@ -36,14 +36,6 @@ M.setup = function()
   }
 
   vim.diagnostic.config(config)
-
-  vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-    border = "rounded",
-  })
-
-  vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-    border = "rounded",
-  })
 end
 
 local function lsp_highlight_document(client)
@@ -66,9 +58,9 @@ local function lsp_keymaps()
   local silent = { silent = true }
   nnoremap("gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", silent)
   nnoremap("gd", "<cmd>lua vim.lsp.buf.definition()<CR>", silent)
-  nnoremap("K", "<cmd>lua vim.lsp.buf.hover()<CR>", silent)
+  nnoremap("K", '<cmd>lua vim.lsp.buf.hover({ border = "rounded" })<CR>', silent)
   nnoremap("gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", silent)
-  nnoremap("<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", silent)
+  nnoremap("<C-k>", '<cmd>lua vim.lsp.buf.signature_help({ border = "rounded" })<CR>', silent)
   nnoremap("<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", silent)
   nnoremap("gr", "<cmd>lua vim.lsp.buf.references()<CR>", silent)
   nnoremap("<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", silent)
