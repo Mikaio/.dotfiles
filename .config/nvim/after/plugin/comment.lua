@@ -12,5 +12,15 @@ comment.setup {
     if vim.treesitter.get_parser(0, nil, { error = false }) then
       return pre_hook(ctx)
     end
+
+    -- Comment.nvim's fallback assumes get_parser() throws when there is no parser.
+    local commentstring = require("Comment.ft").get(vim.bo.filetype, ctx.ctype)
+    if commentstring then
+      return commentstring
+    end
+    if ctx.ctype == require("Comment.utils").ctype.linewise then
+      return vim.bo.commentstring
+    end
+    error({ msg = vim.bo.filetype .. " doesn't support block comments!" })
   end,
 }
