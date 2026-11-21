@@ -18,13 +18,21 @@ return require('lazy').setup({
   "sam4llis/nvim-tundra",
   "nvim-lua/plenary.nvim", -- don't forget to add this one if you don't have it yet!
   "ThePrimeagen/harpoon",
-  "preservim/nerdtree",
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+      "nvim-tree/nvim-web-devicons",
+    },
+  },
   "christoomey/vim-tmux-navigator",
   "nvim-telescope/telescope.nvim",
   "nvim-telescope/telescope-media-files.nvim",
   {
     "nvim-lualine/lualine.nvim",
-    dependencies = { "kyazdani42/nvim-web-devicons", lazy = true }
+    dependencies = { "nvim-tree/nvim-web-devicons", lazy = true }
   },
   "akinsho/toggleterm.nvim",
 
@@ -71,8 +79,4 @@ return require('lazy').setup({
     cmd = "VimBeGood",
   },
 
-  -- use "tiagofumo/vim-nerdtree-syntax-highlight"
-  "johnstef99/vim-nerdtree-syntax-highlight",
-  "Xuyuanp/nerdtree-git-plugin",
-  "ryanoasis/vim-devicons",
 })

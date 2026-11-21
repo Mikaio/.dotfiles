@@ -5,8 +5,19 @@ local inoremap = Remap.inoremap
 local xnoremap = Remap.xnoremap
 local nmap = Remap.nmap
 
-nnoremap("<C-b>", "<cmd>silent NERDTreeToggle<CR>")
-inoremap("<C-b>", "<cmd>silent NERDTreeToggle<CR>")
+local function toggle_explorer()
+  for _, win in ipairs(vim.api.nvim_tabpage_list_wins(0)) do
+    local buf = vim.api.nvim_win_get_buf(win)
+    if vim.bo[buf].filetype == "neo-tree" and vim.b[buf].neo_tree_position == "left" then
+      vim.cmd("Neotree close left")
+      return
+    end
+  end
+  vim.cmd("Neotree filesystem left")
+end
+
+nnoremap("<C-b>", toggle_explorer)
+inoremap("<C-b>", toggle_explorer)
 
 nnoremap("<leader>qw", "<cmd>tabp<CR>") -- goes to previous tab
 nnoremap("<leader>op", "<cmd>tabn<CR>") -- goes to next tab
