@@ -15,6 +15,11 @@ neo_tree.setup({
       { source = "document_symbols", display_name = "" },
     },
   },
+  filesystem = {
+    filtered_items = {
+      hide_dotfiles = false,
+    },
+  },
   window = {
     position = "left",
     mappings = {
